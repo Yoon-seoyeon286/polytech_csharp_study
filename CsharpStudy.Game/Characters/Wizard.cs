@@ -1,0 +1,15 @@
+namespace CsharpStudy.Game.Characters;
+
+public class Wizard :Character
+{
+    public void Fireball()
+    {
+        
+    }
+
+    public override void Run()
+    {
+        
+    }
+    
+}
