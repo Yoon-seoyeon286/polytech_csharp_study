@@ -12,7 +12,6 @@ public class Word
     }
    
     
-
     public bool IsVowel(int wordCount) //i번째 글자가 모음인지 알려주는 메서드
     {
         string[] splitVowels = vowel.Split(',');
@@ -26,6 +25,24 @@ public class Word
         }
         
         return false;
+    }
+
+    public bool IsConsonant(int wordCount)
+    {
+        string[] splitVowels = vowel.Split(',');
+        string wordLower = word.ToLower();
+        
+        char words = wordLower[wordCount];
+        
+        foreach (string splitVowel in splitVowels )
+        {
+            if (words.ToString().Equals(splitVowel) == true)
+            {
+                return false;
+            }
+        }
+        
+        return true;
     }
 }
 

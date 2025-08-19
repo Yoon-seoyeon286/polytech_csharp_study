@@ -12,8 +12,6 @@ public class WordTest
     {
         Word word = new Word("Cyphers");
 
-        word.IsVowel(4);
-
         Console.WriteLine(word.IsVowel(4));
     }
 }
