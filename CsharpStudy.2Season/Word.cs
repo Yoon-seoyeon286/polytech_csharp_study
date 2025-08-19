@@ -6,24 +6,23 @@ public class Word
     private int wordCount;
     public const string vowel = "a,e,i,o,u";
     
-    Word(string word, int wordCount)
+    public Word(string word)
     {
         this.word = word;
-        this.wordCount = wordCount;
     }
    
     
 
-    public bool isVowel(int wordCount) //i번째 글자가 모음인지 알려주는 메서드
+    public bool IsVowel(int wordCount) //i번째 글자가 모음인지 알려주는 메서드
     {
-        string[] splitVowel = vowel.Split(',');
+        string[] splitVowels = vowel.Split(',');
         string wordLower = word.ToLower();
-
-        string[] splitWord = wordLower.Split("");
-
-        foreach (string splitVowels in splitVowel )
+        
+        char words = wordLower[wordCount];
+        
+        foreach (string splitVowel in splitVowels )
         {
-            return splitWord[wordCount] == splitVowels;
+            return words.ToString().Equals(splitVowel);
         }
         
         return false;

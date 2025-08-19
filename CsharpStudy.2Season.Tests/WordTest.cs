@@ -8,8 +8,12 @@ public class WordTest
 {
 
     [Test]
-    public void METHOD()
+    public void 원하는_자리의_모음_맞추기()
     {
-        
+        Word word = new Word("Cyphers");
+
+        word.IsVowel(4);
+
+        Console.WriteLine(word.IsVowel(4));
     }
 }
