@@ -21,7 +21,10 @@ public class Word
         
         foreach (string splitVowel in splitVowels )
         {
-            return words.ToString().Equals(splitVowel);
+            if (words.ToString().Equals(splitVowel))
+            {
+                return true;
+            }
         }
         
         return false;
@@ -36,7 +39,7 @@ public class Word
         
         foreach (string splitVowel in splitVowels )
         {
-            if (words.ToString().Equals(splitVowel) == true)
+            if (words.ToString().Equals(splitVowel))
             {
                 return false;
             }

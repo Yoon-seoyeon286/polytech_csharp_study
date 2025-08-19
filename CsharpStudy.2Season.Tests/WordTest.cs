@@ -14,4 +14,27 @@ public class WordTest
 
         Console.WriteLine(word.IsVowel(4));
     }
+    
+    [Test]
+    public void 원하는_자리의_모음_맞추기2()
+    {
+        Word word = new Word("Cyphers");
+
+        Console.WriteLine(word.IsVowel(2));
+    }
+
+    [Test]
+    public void 원하는_자리의_자음_맞추기()
+    {
+        Word word = new Word("Cyphers");
+        Console.WriteLine(word.IsConsonant(2));
+    }
+    
+    
+    [Test]
+    public void 원하는_자리의_자음_맞추기2()
+    {
+        Word word = new Word("Cyphers");
+        Console.WriteLine(word.IsConsonant(4));
+    }
 }
