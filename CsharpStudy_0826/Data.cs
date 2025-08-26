@@ -43,6 +43,15 @@ public class Data
             .ToList()
             .ForEach(Console.WriteLine);
         Console.WriteLine("=======================");
+        
+        // 5. 밀라노에 거래자가 있는가?Any
+        bool result = transactions.Any(transactions=>transactions.Trader.City =="Milan");
+            Console.WriteLine(result);
+            Console.WriteLine("=======================");
+        
+      // 6. 케임브리지에 거주하는 거래자의 모든 트랙잭션값을 출력하시오/Where /Select
+        
+            
 
     }
 
