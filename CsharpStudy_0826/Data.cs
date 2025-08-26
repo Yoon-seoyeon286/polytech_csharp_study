@@ -55,6 +55,11 @@ public class Data
            .ToList()
            .ForEach(Console.WriteLine);
        Console.WriteLine("=======================");
+       
+       // 7. 전체 트랜잭션 중 최대값은 얼마인가?/Aggregate
+       int maxResult = transactions.Max(transactions=>transactions.Value);
+       Console.WriteLine(maxResult);
+       Console.WriteLine("=======================");
             
 
     }
