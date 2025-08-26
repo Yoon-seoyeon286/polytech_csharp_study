@@ -49,8 +49,12 @@ public class Data
             Console.WriteLine(result);
             Console.WriteLine("=======================");
         
-      // 6. 케임브리지에 거주하는 거래자의 모든 트랙잭션값을 출력하시오/Where /Select
-        
+       // 6. 케임브리지에 거주하는 거래자의 모든 트랙잭션값을 출력하시오/Where /Select
+       transactions.Where(transactions=>transactions.Trader.City =="Cambridge")
+           .Select(transactions=>transactions.Value)
+           .ToList()
+           .ForEach(Console.WriteLine);
+       Console.WriteLine("=======================");
             
 
     }
