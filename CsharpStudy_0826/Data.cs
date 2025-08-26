@@ -60,7 +60,22 @@ public class Data
        int maxResult = transactions.Max(transactions=>transactions.Value);
        Console.WriteLine(maxResult);
        Console.WriteLine("=======================");
-            
+       
+       // 7. 전체 트랜잭션 중 최대값은 얼마인가?/Aggregate2
+       int maxResult2 = transactions.Select(transactions => transactions.Value)
+           .Aggregate((e, v) => Math.Max(e,v));
+       Console.WriteLine(maxResult2);
+       Console.WriteLine("=======================");
+       
+       // 8. 전체 트랜잭션 중 최소값은 얼마인가?/Aggregate
+       int minResult = transactions.Min(transactions=>transactions.Value);
+       Console.WriteLine(minResult);
+       Console.WriteLine("=======================");
+       
+       // 8. 전체 트랜잭션 중 최소값은 얼마인가?/Aggregate2
+       int minResul2 = transactions.Select(transactions=>transactions.Value)
+           .Aggregate((e, v) => Math.Min(e,v));
+       Console.WriteLine(minResul2);
 
     }
 
