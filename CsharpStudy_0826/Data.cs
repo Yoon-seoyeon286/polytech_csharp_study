@@ -20,12 +20,14 @@ public class Data
             .Select(transactions=>transactions.Trader.Name)
             .ToList()
             .ForEach(Console.WriteLine);
+        Console.WriteLine("=======================");
         
         // 2. 거래자가 근무하는 모든 도시를 중복 없이 나열하시오 /Select
         transactions.Select(transactions => transactions.Trader.City)
             .ToHashSet()
             .ToList()
             .ForEach(Console.WriteLine);
+        Console.WriteLine("=======================");
         
         // 3. 케임브리지에서 근무하는 모든 거래자를 찾아서 이름순으로 정렬하여 나열하시오/Where /Select
         transactions.Where(transactions=>transactions.Trader.City =="Cambridge")
@@ -33,6 +35,14 @@ public class Data
             .Select(transactions=>transactions.Trader.Name)
             .ToList()
             .ForEach(Console.WriteLine);
+        Console.WriteLine("=======================");
+        
+        // 4. 모든 거래자의 이름을 알파벳순으로 정렬하여 나열하시오/Select
+        transactions.OrderBy(transactions=>transactions.Trader.Name)
+            .Select(transactions=>transactions.Trader.Name)
+            .ToList()
+            .ForEach(Console.WriteLine);
+        Console.WriteLine("=======================");
 
     }
 
