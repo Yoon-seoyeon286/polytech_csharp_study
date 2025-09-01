@@ -14,6 +14,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CsharpStudy_0826", "CsharpS
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "250901", "250901\250901.csproj", "{15F1B577-A6D7-441A-85E1-91A753498EC1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "250901_2", "250901_2\250901_2.csproj", "{88578891-E70A-4052-8F83-E30C29030F3B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -48,5 +50,9 @@ Global
 		{15F1B577-A6D7-441A-85E1-91A753498EC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{15F1B577-A6D7-441A-85E1-91A753498EC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{15F1B577-A6D7-441A-85E1-91A753498EC1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88578891-E70A-4052-8F83-E30C29030F3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88578891-E70A-4052-8F83-E30C29030F3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88578891-E70A-4052-8F83-E30C29030F3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88578891-E70A-4052-8F83-E30C29030F3B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
