@@ -4,6 +4,8 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello, World!");
+        var numString = "10.5";
+        int num  = int.Parse(numString);
+        Console.WriteLine(num);
     }
 }
