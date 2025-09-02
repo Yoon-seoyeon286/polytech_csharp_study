@@ -11,6 +11,6 @@ class Program
         string jsonString = JsonSerializer.Serialize(employee);
         System.IO.File.WriteAllText("company.json", jsonString);
         Employee? loadedEmployee = JsonSerializer.Deserialize<Employee>(jsonString);
-
+        Console.WriteLine($"이름: {loadedEmployee.Name}, 나이: {loadedEmployee.Age}");
     }
 }
