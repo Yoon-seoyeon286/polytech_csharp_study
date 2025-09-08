@@ -1,4 +1,6 @@
-﻿namespace _250908;
+﻿using System.Globalization;
+
+namespace _250908;
 
 class Program
 {
@@ -19,8 +21,22 @@ class Program
         await Task.Delay(3000);
         return "짹쨱쨲ㄱ잭";
     }
-    static void Main(string[] args)
+    static async Task Main(string[] args)
     {
-        Console.WriteLine("Hello, World!");
+        for(int i = 0; i < 4; i++)
+        {
+            List<string> tasks = new List<string>();
+            tasks.Add(await FirstBird());
+            tasks.Add(await SecondBird());
+            tasks.Add(await ThirdBird());
+
+            foreach (string task in tasks)
+            {
+                Console.WriteLine(task);
+            }
+
+            Console.WriteLine("======================");
+
+        }
     }
 }
