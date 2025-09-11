@@ -6,7 +6,14 @@ namespace _250911;
 
 public class MockItemDataSource:IItemDataSource
 {
-    private List<Item> _items=[];
+    //private List<Item> _items=[];
+    
+    private List<Item> _items = new List<Item>
+    {
+        { new Item(10, "Sword", 1) },
+        { new Item(20, "Shield", 2) },
+    };
+
     public async Task<List<Item>> LoadAllItemsAsync()
     {
         return _items;
@@ -14,7 +21,7 @@ public class MockItemDataSource:IItemDataSource
 
     public async Task SaveAllItemsAsync(List<Item> items)
     {
-        _items = items;
+        this._items = items;
     }
-    
+
 }

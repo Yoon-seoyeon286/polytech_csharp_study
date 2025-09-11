@@ -8,7 +8,7 @@ public class InventoryRepository : IInventoryRepository
     private IItemDataSource _itemDataSource;
     private int _maxSlot;
     private int _maxStack;
-    InventoryRepository(IItemDataSource itemDataSource, int maxSlot, int maxStack)
+    public InventoryRepository(IItemDataSource itemDataSource, int maxSlot, int maxStack)
     {
         _itemDataSource = itemDataSource;
         _maxSlot = maxSlot;
