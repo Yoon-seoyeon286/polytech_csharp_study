@@ -68,4 +68,23 @@ public class Tests
              
             
          }
+
+         [Test]
+         public async Task Test5()
+         {
+             MockItemDataSource _mockItemDataSource = new MockItemDataSource();
+             InventoryRepository _inventory = new InventoryRepository(_mockItemDataSource, 2,99);
+             var checkItem = await _inventory.GetItemsAsync();
+             
+             Item potionItem = new Item(30, "Potion", 99);
+             checkItem.Add(potionItem);
+             
+             Item potionItem2 = new Item(30, "Potion", 1);
+             checkItem.Add(potionItem2);
+             
+             bool result = await _inventory.AddItemAsync(potionItem2);
+             Assert.IsFalse(result);
+             
+             Assert.IsTrue(checkItem.Any(item =>item.Count==99));
+         }
 }
