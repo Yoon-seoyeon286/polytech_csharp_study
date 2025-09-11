@@ -32,7 +32,30 @@ public class InventoryRepository : IInventoryRepository
     //아이템을 인벤토리에 추가하는 메서드. 성공시 true, 실패시 false
     public async Task<bool> AddItemAsync(Item item)
     {
+        List<Item> items = await GetItemsAsync();
+
+        if (items.Count >= _maxSlot)
+        {
+            return false;
+        }
         
+        Item? itemReal = items.FirstOrDefault(i=>i.Name==item.Name);
+
+        if (itemReal != null)
+        {
+            itemReal.Count++;
+            if (itemReal.Count > _maxStack)
+            {
+                return false;
+            }
+        }
+        
+        else
+        {
+            items.Add(item);
+        }
+        await _itemDataSource.SaveAllItemsAsync(items);
+        return true;
     }
 
 }
