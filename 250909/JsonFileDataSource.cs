@@ -14,8 +14,17 @@ public class JsonFileDataSource : IDataSource
     
     public async Task<List<Person>> GetPeopleAsync()
     {
-        string jsonString = await File.ReadAllTextAsync(_fileName);
-        return JsonConvert.DeserializeObject<List<Person>>(jsonString)??[];
+        try
+        {
+            string jsonString = await File.ReadAllTextAsync(_fileName);
+            return JsonConvert.DeserializeObject<List<Person>>(jsonString) ?? [];
+        }
+        
+        catch(Exception e)
+        {
+            return [];
+        }
+
     }
 
     public async Task SavePeopleAsync(List<Person> people)

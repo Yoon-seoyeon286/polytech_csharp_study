@@ -4,6 +4,8 @@ class Program
 {
     static async Task Main(string[] args)
     {
+
+        
         IDataSource dataSource = new JsonFileDataSource("people.json");
 
         //데이터 필터링
