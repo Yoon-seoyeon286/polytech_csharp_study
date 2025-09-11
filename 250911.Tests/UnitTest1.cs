@@ -15,6 +15,7 @@ public class Tests
              InventoryRepository _inventory = new InventoryRepository(_mockItemDataSource, 10,10);
              
              var checkItem = await _inventory.GetItemsAsync();
+             
              Assert.IsTrue(checkItem.Any(items=> items.Name=="Sword"));
              Assert.IsTrue(checkItem.Any(items=> items.Name=="Shield"));
              
@@ -49,5 +50,22 @@ public class Tests
              
              Assert.IsTrue(checkItem.Any(item =>item.Count==2));
              
+         }
+
+         [Test]
+         public async Task Test4()
+         {
+             MockItemDataSource _mockItemDataSource = new MockItemDataSource();
+             InventoryRepository _inventory = new InventoryRepository(_mockItemDataSource, 2,20);
+             var checkItem = await _inventory.GetItemsAsync();
+             
+             Item potionItem = new Item(30, "Potion", 1);
+             checkItem.Add(potionItem);
+             
+             bool result = await _inventory.AddItemAsync(potionItem);
+             
+             Assert.IsFalse(result);
+             
+            
          }
 }
