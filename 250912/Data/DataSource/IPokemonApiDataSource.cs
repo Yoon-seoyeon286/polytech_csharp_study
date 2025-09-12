@@ -4,6 +4,8 @@ namespace _250912.Data.DataSource;
 
 public interface IPokemonApiDataSource<T>
 {
-    public Task<Response<List<T>>> GetPokemonAsync(string pokemonName);
+    Task<Response> GetAllAsync();
+
+    public Task<Response> GetPokemonAsync(string pokemonName);
 
 }
