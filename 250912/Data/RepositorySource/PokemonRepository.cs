@@ -5,18 +5,13 @@ namespace _250912.Data.RepositorySource;
 
 public class PokemonRepository :IPokemonRepository
 {
-    private IPokemonApiDataSource<Post> _dataSource;
-
-    public async Task<List<Post>> GetPostsAsync()
-    {
-      var response = await _dataSource.GetAllAsync();
-      return JsonConvert.DeserializeObject<List<Post>>(response.Body)??new List<Post>();
-      
-    }
+    private IPokemonApiDataSource<Pokemon> _dataSource;
+    
 
     public async Task<Pokemon?> GetPokemonByNameAsync(string pokemonName)
     {
-        return _pokemonRepositoryImplementation.DeletePostAsync(pokemonName);
+        var response = await _dataSource.GetPokemonAsync(pokemonName);
+        return response.Body;
     }
     
 }
