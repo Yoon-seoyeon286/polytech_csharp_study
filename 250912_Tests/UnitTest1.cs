@@ -14,4 +14,13 @@ public class Tests
         Pokemon pokemon = await pokemonRepository.GetPokemonByNameAsync("Roselia");
         Assert.NotNull(pokemon);
     }
+
+    [Test]
+    public async Task Test2()
+    {
+        IPokemonApiDataSource<Pokemon> pokemonApiDataSource = new PokemonDataSource(new HttpClient());
+        var response = await pokemonApiDataSource.GetPokemonAsync("Roselia");
+        
+        Assert.That(response.Body, Is.Not.Null);
+    }
 }
