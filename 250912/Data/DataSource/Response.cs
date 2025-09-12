@@ -13,8 +13,5 @@ public class Response<T>
         Body = body;
     }
 
-    public async Task<Response<T>> GetAllAsync()
-    {
-        var response = new 
-    }
+
 }
