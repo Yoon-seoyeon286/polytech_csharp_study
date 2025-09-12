@@ -6,6 +6,11 @@ namespace _250912.Data.RepositorySource;
 public class PokemonRepository :IPokemonRepository
 {
     private IPokemonApiDataSource<Pokemon> _dataSource;
+
+    public PokemonRepository(IPokemonApiDataSource<Pokemon> dataSource)
+    {
+        _dataSource = dataSource;
+    }
     
 
     public async Task<Pokemon?> GetPokemonByNameAsync(string pokemonName)

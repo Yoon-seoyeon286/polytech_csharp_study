@@ -4,7 +4,7 @@ namespace _250912.Data.DataSource;
 
 public class PokemonDataSource : IPokemonApiDataSource<Pokemon>
 {
-    private const string BaseUrl = "https://pokeapi.co/api/v2/pokemon/Roselia";
+    private const string BaseUrl = "https://pokeapi.co/api/v2/pokemon";
     private HttpClient _httpClient;
     
     public PokemonDataSource(HttpClient httpClient)
