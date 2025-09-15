@@ -9,7 +9,7 @@ public static class PokemonMappers //한 객체를 다른 객체로 변환해주
         (
             id: dto.Id,
             name: dto.Name
-            //로운 Models.Pokemon 객체를 생성
+            //새로운 Models.Pokemon 객체를 생성
         );
     }
     
