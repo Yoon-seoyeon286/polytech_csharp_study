@@ -24,7 +24,7 @@ public class PokemonApiDataSource : IPokemonApiDataSource<Pokemon>
         return new Response(
             statusCode:(int)response.StatusCode,
             headers: headers,
-            body: JsonConvert.DeserializeObject<Pokemon>(jsonString)
+            body: JsonConvert.DeserializeObject<PokemonDto>(jsonString)
         );
 
     }

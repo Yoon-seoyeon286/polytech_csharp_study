@@ -12,7 +12,7 @@ public class PokemonRepository : IPokemonRepsoitory
         _DataSource = dataSource;
     }
 
-    public async Task<Pokemon?> GetPokemonByNameAsync(string pokemonName)
+    public async Task<PokemonDto?> GetPokemonByNameAsync(string pokemonName)
     {
         var response = await _DataSource.GetPokemonAsync(pokemonName);
         return response.Body;

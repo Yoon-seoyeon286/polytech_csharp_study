@@ -4,5 +4,5 @@ namespace _250915.Data.Repositiories;
 
 public interface IPokemonRepsoitory
 {
-    public Task<Pokemon?> GetPokemonByNameAsync(string pokemonName);
+    public Task<PokemonDto?> GetPokemonByNameAsync(string pokemonName);
 }
