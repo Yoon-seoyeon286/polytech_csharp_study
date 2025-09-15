@@ -5,9 +5,9 @@ namespace _250915.Data.Repositiories;
 
 public class PokemonRepository : IPokemonRepsoitory
 {
-    private IPokemonApiDataSource<Pokemon> _DataSource;
+    private IPokemonApiDataSource<PokemonDto> _DataSource;
 
-    public PokemonRepository(IPokemonApiDataSource<Pokemon> dataSource)
+    public PokemonRepository(IPokemonApiDataSource<PokemonDto> dataSource)
     {
         _DataSource = dataSource;
     }
