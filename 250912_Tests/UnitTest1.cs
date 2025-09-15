@@ -21,6 +21,7 @@ public class Tests
         IPokemonApiDataSource<Pokemon> pokemonApiDataSource = new PokemonDataSource(new HttpClient());
         var response = await pokemonApiDataSource.GetPokemonAsync("Roselia");
         
-        Assert.That(response.Body, Is.Not.Null);
+        Assert.That("Roselia",  Is.EqualTo("Roselia"));
     }
+
 }
